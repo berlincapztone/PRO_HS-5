@@ -139,6 +139,25 @@
             color: var(--primary) !important;
         }
         
+        /* Ensure images scale correctly */
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        /* Adjust text and button sizes for smaller screens */
+        @media (max-width: 767px) {
+            .product-item .h5 {
+                font-size: 1.25rem; /* Adjust font size for product name */
+            }
+            .btn-primary {
+                font-size: 14px; /* Adjust font size for button */
+                padding: 10px 20px; /* Adjust padding for button */
+            }
+        }
+        
+
         /* Clients Section Styles */
         #clients {
             background: #FFF;
@@ -284,151 +303,129 @@
 </div>
 
 
-
-  <!-- Product Start -->
-  <div class="container-xxl py-5">
+ <!-- Product Start -->
+ <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-4 mb-3" style="color: #FFD966; font-size: 4rem;"> beewax Products</h1>
+                    <h1 class="display-4 mb-3" style="color: #FFD966; font-size: 4rem;">Beewax Products</h1>
                     <p style="font-size: 1.2rem;">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
-                        <a class="btn border-2 rounded-full text-white border-yellow-400 bg-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-1">Honey</a>
+                        <a class="btn btn-rounded text-white bg-yellow-400 border-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-1">Honey</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn border-2 rounded-full text-white border-yellow-400 bg-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-2">Honey</a>
+                        <a class="btn btn-rounded text-white bg-yellow-400 border-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-2">Honey</a>
                     </li>
                     <li class="nav-item me-0">
-                        <a class="btn border-2 rounded-full text-white border-yellow-400 bg-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-3">Honey</a>
+                        <a class="btn btn-rounded text-white bg-yellow-400 border-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-3">Honey</a>
                     </li>
-                    
                 </ul>
             </div>
         </div>
         <div class="tab-content">
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
-           <!-- Product Card 1 -->
-           <div class="col-xl-3 col-lg-4 col-md-6" style="margin-left: 90px;">
-            <div class="product-item">
-                <div class="position-relative bg-light overflow-hidden">
-                    <img class="img-fluid w-100" src="{% static 'assets/images/beewax1.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> <!-- Increased height -->
-                    <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
-                </div>
-                <div class="text-center p-4">
-                    <a class="d-block h5 mb-2 text-[#FFD966]" href="">beewax</a>
-                    <span class="text-black me-1">₹ 19.00</span>
-                    <span class="text-body text-decoration-line-through">₹29.00</span>
-                </div>
-                <div class="d-flex border-top">
-                    <small class="w-50 text-center border-end py-2">
-                        <a class="text-body" href="" style="color: #FFD966;">
-                            <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                        </a>
-                    </small>
-                    <small class="w-50 text-center py-2">
-                        <a class="text-body" href="" style="color: #FFD966;">
-                            <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                        </a>
-                    </small>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Repeat for other product cards -->
-        
-        
-        <!-- Product Card 1 -->
-        <div class="col-xl-3 col-lg-4 col-md-6" style="margin-left: 90px;">
-            <div class="product-item">
-                <div class="position-relative bg-light overflow-hidden">
-                    <img class="img-fluid w-100" src="{% static 'assets/images/beewax.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> <!-- Increased height -->
-                    <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
-                </div>
-                <div class="text-center p-4">
-                    <a class="d-block h5 mb-2 text-[#FFD966]" href="">beewax</a>
-                    <span class="text-black me-1">₹89.00</span>
-                    <span class="text-body text-decoration-line-through">₹109.00</span>
-                </div>
-                <div class="d-flex border-top">
-                    <small class="w-50 text-center border-end py-2">
-                        <a class="text-body" href="" style="color: #FFD966;">
-                            <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                        </a>
-                    </small>
-                    <small class="w-50 text-center py-2">
-                        <a class="text-body" href="" style="color: #FFD966;">
-                            <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                        </a>
-                    </small>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Repeat for other product cards -->
-        
-        <!-- Product Card 1 -->
-        <div class="col-xl-3 col-lg-4 col-md-6" style="margin-left: 90px;">
-            <div class="product-item">
-                <div class="position-relative bg-light overflow-hidden">
-                    <img class="img-fluid w-100" src="{% static 'assets/images/beewax1.jpg' %}" alt="" style="height: 300px; object-fit: cover;"> <!-- Increased height -->
-                    <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
-                </div>
-                <div class="text-center p-4">
-                    <a class="d-block h5 mb-2 text-[#FFD966]" href="">beewax</a>
-                    <span class="text-black me-1">₹49.00</span>
-                    <span class="text-body text-decoration-line-through">₹59.00</span>
-                </div>
-                <div class="d-flex border-top">
-                    <small class="w-50 text-center border-end py-2">
-                        <a class="text-body" href="" style="color: #FFD966;">
-                            <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                        </a>
-                    </small>
-                    <small class="w-50 text-center py-2">
-                        <a class="text-body" href="" style="color: #FFD966;">
-                            <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                        </a>
-                    </small>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Repeat for other product cards -->
-        
-        
-
-<!-- Repeat for other product cards -->
-
-
-
-
-
-
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn rounded-pill py-2 px-4" href="" style="background-color: #FFD966; color: white; border: none; font-size: 14px;">
-                            Browse More Products
-                        </a>
-                        
+                    <!-- Product Card 1 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="product-item">
+                            <div class="position-relative bg-light overflow-hidden">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/beewax1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                                <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
+                            </div>
+                            <div class="text-center p-4">
+                                <a class="d-block h5 mb-2 text-[#FFD966]" href="">Beewax</a>
+                                <span class="text-black me-1">₹ 19.00</span>
+                                <span class="text-body text-decoration-line-through">₹29.00</span>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="w-50 text-center border-end py-2">
+                                    <a class="text-body" href="" style="color: #FFD966;">
+                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                    </a>
+                                </small>
+                                <small class="w-50 text-center py-2">
+                                    <a class="text-body" href="" style="color: #FFD966;">
+                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Repeat Product Cards -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="product-item">
+                            <div class="position-relative bg-light overflow-hidden">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/beewax.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                                <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
+                            </div>
+                            <div class="text-center p-4">
+                                <a class="d-block h5 mb-2 text-[#FFD966]" href="">Beewax</a>
+                                <span class="text-black me-1">₹89.00</span>
+                                <span class="text-body text-decoration-line-through">₹109.00</span>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="w-50 text-center border-end py-2">
+                                    <a class="text-body" href="" style="color: #FFD966;">
+                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                    </a>
+                                </small>
+                                <small class="w-50 text-center py-2">
+                                    <a class="text-body" href="" style="color: #FFD966;">
+                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional Product Cards -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="product-item">
+                            <div class="position-relative bg-light overflow-hidden">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/beewax1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                                <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
+                            </div>
+                            <div class="text-center p-4">
+                                <a class="d-block h5 mb-2 text-[#FFD966]" href="">Beewax</a>
+                                <span class="text-black me-1">₹49.00</span>
+                                <span class="text-body text-decoration-line-through">₹59.00</span>
+                            </div>
+                            <div class="d-flex border-top">
+                                <small class="w-50 text-center border-end py-2">
+                                    <a class="text-body" href="" style="color: #FFD966;">
+                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                    </a>
+                                </small>
+                                <small class="w-50 text-center py-2">
+                                    <a class="text-body" href="" style="color: #FFD966;">
+                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                    </a>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="btn rounded-pill py-2 px-4" href="" style="background-color: #FFD966; color: white; border: none; font-size: 14px;">
+                        Browse More Products
+                    </a>
                 </div>
             </div>
             <div id="tab-2" class="tab-pane fade show p-0">
                 <div class="row g-4">
                     <!-- Product 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
+                                <a class="d-block h5 mb-2" href="">Oil</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
@@ -442,15 +439,15 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Product 2 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <!-- Repeat for other products -->
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
                                 <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
+                                <a class="d-block h5 mb-2" href="">Oil</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
@@ -464,262 +461,241 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Product 3 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
-                                <span class="text-primary me-1">$19.00</span>
-                                <span class="text-body text-decoration-line-through">$29.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Add more products as needed -->
             
-                    
                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
                         <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
                     </div>
                 </div>
             </div>
+            
+        
             <div id="tab-3" class="tab-pane fade show p-0">
                 <div class="row g-4">
                     <!-- Product 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="product-item">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/product-1.jpg" alt="" style="object-fit: cover; height: 200px;">
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
+                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
                                 <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                 </small>
                                 <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                 </small>
                             </div>
                         </div>
                     </div>
                     <!-- Product 2 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="product-item">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/product-2.jpg" alt="" style="object-fit: cover; height: 200px;">
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
+                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
                                 <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                 </small>
                                 <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                 </small>
                             </div>
                         </div>
                     </div>
                     <!-- Product 3 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="product-item">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/product-3.jpg" alt="" style="object-fit: cover; height: 200px;">
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
+                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
                                 <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                 </small>
                                 <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                 </small>
                             </div>
                         </div>
                     </div>
                     <!-- Product 4 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="product-item">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
+                                <img class="img-fluid w-100" src="img/product-4.jpg" alt="" style="object-fit: cover; height: 200px;">
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">oil</a>
+                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
                                 <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                 </small>
                                 <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                 </small>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="" style="font-size: 1rem; padding: 10px 20px;">Browse More Products</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
+            
 <!-- Product End -->
-
 <div class="bg-gray-50 py-10">
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Blog Card 1: The Versatility of Beeswax -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax.jpg' %}" alt="Beeswax Blog Image 1">
-            <div class="p-4">
-                <!-- Metadata Section -->
-                <div class="flex items-center mb-3">
-                    <!-- Date Badge -->
-                    <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs">07 Sep</span>
-                    
-                    <!-- Author and Comments -->
-                    <div class="ml-3 flex items-center text-gray-500 space-x-3">
-                        <!-- Author Info -->
-                        <span class="inline-flex items-center text-sm">
-                            <i class="fas fa-user text-yellow-500 text-sm"></i>
-                            <span class="ml-1">BeeswaxGuru</span>
-                        </span>
-                        <!-- Comments Info -->
-                        <span class="inline-flex items-center text-sm">
-                            <i class="fas fa-comment text-yellow-500 text-sm"></i>
-                            <span class="ml-1">5 Comments</span>
-                        </span>
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Blog Card 1: The Versatility of Beeswax -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax.jpg' %}" alt="Beeswax Blog Image 1">
+                <div class="p-4">
+                    <!-- Metadata Section -->
+                    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+                        <!-- Date Badge -->
+                        <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs mb-2 sm:mb-0">07 Sep</span>
+                        
+                        <!-- Author and Comments -->
+                        <div class="ml-0 sm:ml-3 flex flex-col sm:flex-row text-gray-500 space-y-2 sm:space-y-0 sm:space-x-3">
+                            <!-- Author Info -->
+                            <span class="inline-flex items-center text-sm">
+                                <i class="fas fa-user text-yellow-500 text-sm"></i>
+                                <span class="ml-1">BeeswaxGuru</span>
+                            </span>
+                            <!-- Comments Info -->
+                            <span class="inline-flex items-center text-sm">
+                                <i class="fas fa-comment text-yellow-500 text-sm"></i>
+                                <span class="ml-1">5 Comments</span>
+                            </span>
+                        </div>
                     </div>
+                    
+                    <!-- Blog Title -->
+                    <h2 class="text-sm font-bold text-gray-800 mb-2">The Versatility of Beeswax</h2>
+                    
+                    <!-- Blog Excerpt -->
+                    <p class="text-gray-600 text-sm mb-3">
+                        Beeswax is a natural and versatile product with a wide range of uses, from skincare to crafting. Discover how you can incorporate this eco-friendly material into your daily life.
+                    </p>
+                    
+                    <!-- Read More Link -->
+                    <a href="#" class="text-yellow-500 font-semibold text-sm inline-flex items-center hover:underline">
+                        Read More
+                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                    </a>
                 </div>
-                
-                <!-- Blog Title -->
-                <h2 class="text-sm font-bold text-gray-800 mb-2">The Versatility of Beeswax</h2>
-                
-                <!-- Blog Excerpt -->
-                <p class="text-gray-600 text-sm mb-3">
-                    Beeswax is a natural and versatile product with a wide range of uses, from skincare to crafting. Discover how you can incorporate this eco-friendly material into your daily life.
-                </p>
-                
-                <!-- Read More Link -->
-                <a href="#" class="text-yellow-500 font-semibold text-sm inline-flex items-center hover:underline">
-                    Read More
-                    <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                </a>
             </div>
-        </div>
 
-        <!-- Blog Card 2: Crafting with Beeswax -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax1.jpg' %}" alt="Beeswax Blog Image 2">
-            <div class="p-4">
-                <!-- Metadata Section -->
-                <div class="flex items-center mb-3">
-                    <!-- Date Badge -->
-                    <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs">08 Sep</span>
-                    
-                    <!-- Author and Comments -->
-                    <div class="ml-3 flex items-center text-gray-500 space-x-3">
-                        <!-- Author Info -->
-                        <span class="inline-flex items-center text-sm">
-                            <i class="fas fa-user text-yellow-500 text-sm"></i>
-                            <span class="ml-1">CraftBees</span>
-                        </span>
-                        <!-- Comments Info -->
-                        <span class="inline-flex items-center text-sm">
-                            <i class="fas fa-comment text-yellow-500 text-sm"></i>
-                            <span class="ml-1">2 Comments</span>
-                        </span>
+            <!-- Blog Card 2: Crafting with Beeswax -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax1.jpg' %}" alt="Beeswax Blog Image 2">
+                <div class="p-4">
+                    <!-- Metadata Section -->
+                    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+                        <!-- Date Badge -->
+                        <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs mb-2 sm:mb-0">08 Sep</span>
+                        
+                        <!-- Author and Comments -->
+                        <div class="ml-0 sm:ml-3 flex flex-col sm:flex-row text-gray-500 space-y-2 sm:space-y-0 sm:space-x-3">
+                            <!-- Author Info -->
+                            <span class="inline-flex items-center text-sm">
+                                <i class="fas fa-user text-yellow-500 text-sm"></i>
+                                <span class="ml-1">CraftBees</span>
+                            </span>
+                            <!-- Comments Info -->
+                            <span class="inline-flex items-center text-sm">
+                                <i class="fas fa-comment text-yellow-500 text-sm"></i>
+                                <span class="ml-1">2 Comments</span>
+                            </span>
+                        </div>
                     </div>
+                    
+                    <!-- Blog Title -->
+                    <h2 class="text-sm font-bold text-gray-800 mb-2">Crafting with Beeswax: Tips and Ideas</h2>
+                    
+                    <!-- Blog Excerpt -->
+                    <p class="text-gray-600 text-sm mb-3">
+                        From candles to wraps, crafting with beeswax is a rewarding experience. Explore creative ideas and tips to get started on your next beeswax project.
+                    </p>
+                    
+                    <!-- Read More Link -->
+                    <a href="#" class="text-yellow-500 font-semibold text-sm inline-flex items-center hover:underline">
+                        Read More
+                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                    </a>
                 </div>
-                
-                <!-- Blog Title -->
-                <h2 class="text-sm font-bold text-gray-800 mb-2">Crafting with Beeswax: Tips and Ideas</h2>
-                
-                <!-- Blog Excerpt -->
-                <p class="text-gray-600 text-sm mb-3">
-                    From candles to wraps, crafting with beeswax is a rewarding experience. Explore creative ideas and tips to get started on your next beeswax project.
-                </p>
-                
-                <!-- Read More Link -->
-                <a href="#" class="text-yellow-500 font-semibold text-sm inline-flex items-center hover:underline">
-                    Read More
-                    <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                </a>
             </div>
-        </div>
 
-        <!-- Blog Card 3: Benefits of Beeswax in Skincare -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax123.avif' %}" alt="Beeswax Blog Image 3">
-            <div class="p-4">
-                <!-- Metadata Section -->
-                <div class="flex items-center mb-3">
-                    <!-- Date Badge -->
-                    <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs">09 Sep</span>
-                    
-                    <!-- Author and Comments -->
-                    <div class="ml-3 flex items-center text-gray-500 space-x-3">
-                        <!-- Author Info -->
-                        <span class="inline-flex items-center text-sm">
-                            <i class="fas fa-user text-yellow-500 text-sm"></i>
-                            <span class="ml-1">SkinCareBee</span>
-                        </span>
-                        <!-- Comments Info -->
-                        <span class="inline-flex items-center text-sm">
-                            <i class="fas fa-comment text-yellow-500 text-sm"></i>
-                            <span class="ml-1">8 Comments</span>
-                        </span>
+            <!-- Blog Card 3: Benefits of Beeswax in Skincare -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax123.avif' %}" alt="Beeswax Blog Image 3">
+                <div class="p-4">
+                    <!-- Metadata Section -->
+                    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+                        <!-- Date Badge -->
+                        <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs mb-2 sm:mb-0">09 Sep</span>
+                        
+                        <!-- Author and Comments -->
+                        <div class="ml-0 sm:ml-3 flex flex-col sm:flex-row text-gray-500 space-y-2 sm:space-y-0 sm:space-x-3">
+                            <!-- Author Info -->
+                            <span class="inline-flex items-center text-sm">
+                                <i class="fas fa-user text-yellow-500 text-sm"></i>
+                                <span class="ml-1">SkinCareBee</span>
+                            </span>
+                            <!-- Comments Info -->
+                            <span class="inline-flex items-center text-sm">
+                                <i class="fas fa-comment text-yellow-500 text-sm"></i>
+                                <span class="ml-1">8 Comments</span>
+                            </span>
+                        </div>
                     </div>
+                    
+                    <!-- Blog Title -->
+                    <h2 class="text-sm font-bold text-gray-800 mb-2">The Benefits of Beeswax in Skincare</h2>
+                    
+                    <!-- Blog Excerpt -->
+                    <p class="text-gray-600 text-sm mb-3">
+                        Beeswax is a natural emollient that locks in moisture, making it an excellent ingredient in skincare products. Learn about its benefits and how to use it in your routine.
+                    </p>
+                    
+                    <!-- Read More Link -->
+                    <a href="#" class="text-yellow-500 font-semibold text-sm inline-flex items-center hover:underline">
+                        Read More
+                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                    </a>
                 </div>
-                
-                <!-- Blog Title -->
-                <h2 class="text-sm font-bold text-gray-800 mb-2">The Benefits of Beeswax in Skincare</h2>
-                
-                <!-- Blog Excerpt -->
-                <p class="text-gray-600 text-sm mb-3">
-                    Beeswax is a natural emollient that locks in moisture, making it an excellent ingredient in skincare products. Learn about its benefits and how to use it in your routine.
-                </p>
-                
-                <!-- Read More Link -->
-                <a href="#" class="text-yellow-500 font-semibold text-sm inline-flex items-center hover:underline">
-                    Read More
-                    <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                </a>
             </div>
+            
         </div>
-        
     </div>
 </div>
+
+
 
 <!-- Start clients -->
 <section id="clients" class="section">
