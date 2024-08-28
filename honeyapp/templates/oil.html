@@ -259,14 +259,10 @@
 <!-- Header Area End -->
 
 
-<div class="relative bg-cover bg-center h-96" style="background-image: url('{% static "assets/images/image (23).png" %}');">
+<div class="relative bg-cover bg-center h-96" style="background-image: url('{% static "assets/images/cookback.jpg" %}');">
     <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-8">
         <h1 class="text text-4xl md:text-5xl lg:text-6xl font-bold text-left" style="color: #FFD966;">Oil Product</h1>
-        <div class="mt-4">
-            <a href="#" class="text-white text-lg hover:text text-lg hover:text transition-colors">Home</a>
-            <a href="#" class="text-white text-lg hover:text hover:text block mt-2">service</a>
-            <a href="#" class="text-white text-lg hover:text block mt-2">about</a>
-        </div>
+        
     </div>
 </div>
 
@@ -277,7 +273,7 @@
     <!-- Image Section -->
     
     <div class="md:w-1/2 mb-6 md:mb-0">
-      <img src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="Vegetable Oils" class="rounded-lg shadow-">
+      <img src="{% static 'assets/images/cook12.avif' %}" alt="Vegetable Oils" class="rounded-lg shadow-">
     </div>
     
     <!-- Content Section -->
@@ -288,7 +284,6 @@
       </p>
     </div>
 </div>
-
 <!-- Product Start -->
 <div class="container-xxl py-5">
     <div class="container">
@@ -320,7 +315,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/cook2.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
                                 <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
@@ -342,11 +337,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Product 2 -->
+                    <!-- Repeat similar structure for Product 2, 3, and 4 -->
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/cook3.avif' %}" alt="" style="height: 300px; object-fit: cover;">
                                 <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
@@ -368,11 +363,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Product 3 -->
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/cook1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
                                 <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
@@ -394,11 +388,10 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Product 4 -->
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
+                                <img class="img-fluid w-100" src="{% static 'assets/images/cook4.avif' %}" alt="" style="height: 300px; object-fit: cover;">
                                 <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
@@ -423,15 +416,9 @@
                     <!-- End of Products -->
 
                     <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-lg" href="#" style="background-color: #FFD966; color: white; border: 2px solid #FFD966; border-radius: 50px; padding: 10px 20px;">Browse More Products</a>
+                        <a href="#" class="btn" style="background-color: #FFD966; color: white; border-radius: 50px; padding: 10px 30px; font-size: 16px;">Browse More Products</a>
                     </div>
                 </div>
-            </div>
-            <div id="tab-2" class="tab-pane fade show p-0">
-                <!-- Content for Olive Oil Tab -->
-            </div>
-            <div id="tab-3" class="tab-pane fade show p-0">
-                <!-- Content for Safflower Oil Tab -->
             </div>
         </div>
     </div>
@@ -439,13 +426,12 @@
 <!-- Product End -->
 
 
-
 <div class="bg-gray-50 py-10">
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- Blog Card 1 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-32 object-cover" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="Oil Blog Image 1">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}');"></div>
             <div class="p-4">
                 <!-- Metadata Section -->
                 <div class="flex items-center mb-3">
@@ -484,8 +470,8 @@
         </div>
 
         <!-- Blog Card 2 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-32 object-cover" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="Oil Blog Image 2">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('{% static 'assets/images/cook5.avif' %}');"></div>
             <div class="p-4">
                 <!-- Metadata Section -->
                 <div class="flex items-center mb-3">
@@ -524,8 +510,8 @@
         </div>
 
         <!-- Blog Card 3 -->
-        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img class="w-full h-32 object-cover" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="Oil Blog Image 3">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform hover:scale-105">
+            <div class="h-48 bg-cover bg-center" style="background-image: url('{% static 'assets/images/cook1.jpg' %}');"></div>
             <div class="p-4">
                 <!-- Metadata Section -->
                 <div class="flex items-center mb-3">
@@ -565,6 +551,8 @@
         
     </div>
 </div>
+
+
 
 
 <!-- Start clients -->
