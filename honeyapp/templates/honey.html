@@ -173,16 +173,16 @@
             color: #FBBF24; /* Tailwind yellow-400 */
             animation: arrowAnimation 1s infinite;
         }
-        /* Add this CSS to your stylesheet */
-        /* Add this CSS to your stylesheet */
-
+      
         .blog-container {
             display: flex;
             flex-wrap: nowrap; /* Prevent wrapping of cards */
             gap: 1.5rem; /* Adjust the gap between cards as needed */
-            overflow-x: auto; /* Enable horizontal scrolling */
+            overflow-x: auto; /* Enable horizontal scrolling if necessary */
             padding: 1rem;
-            margin-left:100px;
+            margin: 0 auto; /* Center the container horizontally */
+            max-width: 100%; /* Ensure it doesn't exceed the parent width */
+            box-sizing: border-box; /* Include padding and border in width calculation */
         }
         
         .blog-card {
@@ -211,7 +211,6 @@
             flex-direction: column;
             flex-grow: 1;
             padding: 1rem;
-            
         }
         
         .blog-card h2 {
@@ -226,7 +225,7 @@
             margin-bottom: 0.5rem;
             font-size: 1.25rem;
             font-weight: 700;
-            color:#FFB81C; 
+            color: #FFB81C; 
         }
         
         .blog-card p {
@@ -250,6 +249,7 @@
             height: 1rem;
             width: 1rem;
         }
+        
         /* Base styles for the button */
         .learn-more-btn {
             display: inline-block; /* Ensures the button is inline */
@@ -259,28 +259,21 @@
             color: #000; /* text-black */
             border-radius: 100px; /* rounded-full */
             text-align: center;
-            margin-right:140px;
             text-decoration: none;
             font-weight: 500; /* Optional: adjust font weight */
             transition: background-color 0.3s ease;
             width: auto; /* Adjust width based on content */
             height: 40px;
             line-height: 40px; /* Ensures text is centered vertically */
-            padding-left: 1rem; /* Add padding if needed for alignment */
-            padding-right: 1rem; /* Add padding if needed for alignment */
             white-space: nowrap; /* Prevents text from wrapping */
             display: flex; /* Use flexbox to center text horizontally */
             align-items: center; /* Center text vertically */
             justify-content: center; /* Center text horizontally */
         }
         
-        /* Hover effect */
         .learn-more-btn:hover {
             background-color: #F59E0B; /* bg-yellow-600 */
         }
-        
-        
-
 
     </style>
 
@@ -418,7 +411,7 @@
             <img src="{% static 'assets/images/blog1.jpg' %}" alt="blog" />
             <div class="blog-card-content">
                 <h2 class="title-font">Cities</h2>
-                <h1 class="title-font">This season,increased yield of honey</h1>
+                <h1 class="title-font">This season, increased yield of honey</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
                 <div class="blog-card-footer">
                     <span>Oct 30, 2022 · 9 min read</span>
@@ -430,11 +423,7 @@
                         3.5K
                     </span>
                 </div>
-                <!-- Learn More Button -->
                 <a href="#" class="learn-more-btn">Learn More</a>
-
-
-
             </div>
         </article>
 
@@ -454,9 +443,7 @@
                         3.5K
                     </span>
                 </div>
-                <!-- Learn More Button -->
                 <a href="#" class="learn-more-btn">Learn More</a>
-
             </div>
         </article>
 
@@ -476,9 +463,7 @@
                         3.5K
                     </span>
                 </div>
-                <!-- Learn More Button -->
                 <a href="#" class="learn-more-btn">Learn More</a>
-
             </div>
         </article>
 
@@ -486,7 +471,7 @@
             <img src="{% static 'assets/images/blog4.jpg' %}" alt="blog" />
             <div class="blog-card-content">
                 <h2 class="title-font">Cities</h2>
-                <h1 class="title-font">How the honeybee makes honey in pour apiaries</h1>
+                <h1 class="title-font">How the honeybee makes honey in our apiaries</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
                 <div class="blog-card-footer">
                     <span>Oct 30, 2022 · 9 min read</span>
@@ -498,14 +483,13 @@
                         3.5K
                     </span>
                 </div>
-                <!-- Learn More Button -->
                 <a href="#" class="learn-more-btn">Learn More</a>
-
             </div>
         </article>
 
     </div>
 </section>
+
 
 
 

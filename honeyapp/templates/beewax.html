@@ -32,14 +32,13 @@
     <script src="{% static 'path_to/owl.carousel.min.js' %}"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        /*** Footer Start ***/
         .footer {
-            background:url('{% static "assets/images/footer.jpg" %}')no-repeat center center;
+            background: url('{% static "assets/images/footer.jpg" %}') no-repeat center center;
             background-size: cover;
             position: relative;
             overflow: hidden;
         }
-        
+    
         .footer::before {
             content: "";
             position: absolute;
@@ -48,64 +47,64 @@
             width: 100%;
             height: 100%;
             background: rgba(255, 255, 255, 0.5); /* Light white overlay */
-            filter: blur(8px); /* Adjust blur intensity */
-            z-index: 0; /* Make sure the overlay is behind the content */
+            z-index: 0; /* Behind content */
         }
-
+    
         .footer .container {
             position: relative;
-            z-index: 1; /* Ensure content is above the overlay */
+            z-index: 1; /* Above overlay */
         }
-        
+    
         .footer .footer-item a {
             line-height: 35px;
-            color: var(--bs-dark); /* Dark color for better readability */
+            color: var(--bs-dark); /* Dark color */
             transition: 0.5s;
         }
-
+    
         .footer .footer-item p {
             line-height: 35px;
         }
-
+    
         .footer .footer-item a:hover {
             letter-spacing: 1px;
             color: var(--bs-primary);
         }
-
-        .footer .footer-item .footer-btn a {
-            transition: 0.5s;
-        }
-
-        .footer .footer-item .footer-btn a:hover {
-            background: var(--bs-primary);
-            color: var(--bs-white);
-        }
-
+    
         .footer .btn-primary {
             background-color: #d89c03; /* Yellow color */
-            border-color: #d89c03; /* Yellow color */
+            border-color: #d89c03;
         }
-
+    
         .footer .btn-primary:hover {
-            background-color: #d89c03; /* Yellow color */
-            border-color: #d89c03; /* Yellow color */
+            background-color: #b78102; /* Darker yellow */
+            border-color: #b78102;
             color: white;
         }
-
+    
         .footer-item img {
-            width: 50px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: ; /* Optional: Add border-radius for a circular logo */
+            width: 50px;
+            height: auto;
         }
-
+    
         .footer-item h3 {
-            margin-bottom: 0; /* Remove bottom margin to better align with image */
+            margin-bottom: 0;
         }
-
-        .footer-item p {
-            text-align: center; /* Center the paragraph text */
+    
+        @media (max-width: 767px) {
+            .footer-item h4 {
+                text-align: center;
+            }
+            .footer-item a {
+                text-align: center;
+            }
+            .footer-item p {
+                text-align: center;
+            }
+            .footer .container {
+                padding: 0 15px;
+            }
         }
-        /*** Footer End ***/  
+         
         .text {
             color: #914F1E; /* Custom brown color */
         }
@@ -210,7 +209,128 @@
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
             transform: translateY(-50%) scale(1.1); /* Slight scale on hover */
         }
- 
+        .blog-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 1rem;
+        }
+        
+        .blog-card {
+            flex: 0 0 auto;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 480px;
+            transition: transform 0.3s ease-in-out;
+            width: 300px;
+        }
+        
+        .blog-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-card-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 1rem;
+        }
+        
+        .blog-card h2 {
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #e77f3f;
+        }
+        
+        .blog-card h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #FFB81C;
+        }
+        
+        .blog-card p {
+            margin-bottom: 0.5rem;
+            color: #6b7280;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        
+        .blog-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        
+        .learn-more-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #FFB81C;
+            color: #ffffff;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: #e77f3f;
+        }
+        
+        @media (max-width: 1024px) {
+            .blog-card {
+                width: 100%;
+            }
+        }
+        
+        /* Base styles for the button */
+        .learn-more-btn {
+            display: inline-block; /* Ensures the button is inline */
+            margin-top: 1rem; /* mt-4 */
+            padding: 0.5rem 1.5rem; /* py-2 px-4 */
+            background-color: #FBBF24; /* bg-yellow-500 */
+            color: #000; /* text-black */
+            border-radius: 100px; /* rounded-full */
+            text-align: center;
+            margin-right:140px;
+            text-decoration: none;
+            font-weight: 500; /* Optional: adjust font weight */
+            transition: background-color 0.3s ease;
+            width: auto; /* Adjust width based on content */
+            height: 40px;
+            line-height: 40px; /* Ensures text is centered vertically */
+            padding-left: 1rem; /* Add padding if needed for alignment */
+            padding-right: 1rem; /* Add padding if needed for alignment */
+            white-space: nowrap; /* Prevents text from wrapping */
+            display: flex; /* Use flexbox to center text horizontally */
+            align-items: center; /* Center text vertically */
+            justify-content: center; /* Center text horizontally */
+        }
+        
+        /* Hover effect */
+        .learn-more-btn:hover {
+            background-color: #F59E0B; /* bg-yellow-600 */
+        }
 
     </style>
 
@@ -331,7 +451,7 @@
             <div id="tab-1" class="tab-pane fade show p-0 active">
                 <div class="row g-4">
                     <!-- Product Card 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'assets/images/beewax1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
@@ -357,7 +477,7 @@
                         </div>
                     </div>
                     <!-- Repeat Product Cards -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'assets/images/beewax.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
@@ -383,7 +503,7 @@
                         </div>
                     </div>
                     <!-- Additional Product Cards -->
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'assets/images/beewax1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
@@ -409,16 +529,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-12 text-center mt-4">
                     <a class="btn rounded-pill py-2 px-4" href="" style="background-color: #FFD966; color: white; border: none; font-size: 14px;">
                         Browse More Products
                     </a>
                 </div>
             </div>
+            
             <div id="tab-2" class="tab-pane fade show p-0">
                 <div class="row g-4">
                     <!-- Product 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-left: 90px;" >
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
@@ -569,16 +690,16 @@
 <!-- Product End -->
 <div class="bg-gray-50 py-10">
     <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> <!-- Increased gap -->
             
             <!-- Blog Card 1: The Versatility of Beeswax -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax.jpg' %}" alt="Beeswax Blog Image 1">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden p-6"> <!-- Increased padding -->
+                <img class="w-full h-56 object-cover mb-4" src="{% static 'assets/images/beewax.jpg' %}" alt="Beeswax Blog Image 1"> <!-- Increased height and added bottom margin -->
                 <div class="p-4">
                     <!-- Metadata Section -->
-                    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center mb-4"> <!-- Increased bottom margin -->
                         <!-- Date Badge -->
-                        <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs mb-2 sm:mb-0">07 Sep</span>
+                        <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs mb-2 sm:mb-0">07 Sep</span>
                         
                         <!-- Author and Comments -->
                         <div class="ml-0 sm:ml-3 flex flex-col sm:flex-row text-gray-500 space-y-2 sm:space-y-0 sm:space-x-3">
@@ -596,10 +717,10 @@
                     </div>
                     
                     <!-- Blog Title -->
-                    <h2 class="text-sm font-bold text-gray-800 mb-2">The Versatility of Beeswax</h2>
+                    <h2 class="text-base font-bold text-gray-800 mb-3">The Versatility of Beeswax</h2> <!-- Adjusted text size and bottom margin -->
                     
                     <!-- Blog Excerpt -->
-                    <p class="text-gray-600 text-sm mb-3">
+                    <p class="text-gray-600 text-sm mb-4">
                         Beeswax is a natural and versatile product with a wide range of uses, from skincare to crafting. Discover how you can incorporate this eco-friendly material into your daily life.
                     </p>
                     
@@ -612,13 +733,13 @@
             </div>
 
             <!-- Blog Card 2: Crafting with Beeswax -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax1.jpg' %}" alt="Beeswax Blog Image 2">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden p-6"> <!-- Increased padding -->
+                <img class="w-full h-56 object-cover mb-4" src="{% static 'assets/images/beewax1.jpg' %}" alt="Beeswax Blog Image 2"> <!-- Increased height and added bottom margin -->
                 <div class="p-4">
                     <!-- Metadata Section -->
-                    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center mb-4"> <!-- Increased bottom margin -->
                         <!-- Date Badge -->
-                        <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs mb-2 sm:mb-0">08 Sep</span>
+                        <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs mb-2 sm:mb-0">08 Sep</span>
                         
                         <!-- Author and Comments -->
                         <div class="ml-0 sm:ml-3 flex flex-col sm:flex-row text-gray-500 space-y-2 sm:space-y-0 sm:space-x-3">
@@ -636,10 +757,10 @@
                     </div>
                     
                     <!-- Blog Title -->
-                    <h2 class="text-sm font-bold text-gray-800 mb-2">Crafting with Beeswax: Tips and Ideas</h2>
+                    <h2 class="text-base font-bold text-gray-800 mb-3">Crafting with Beeswax: Tips and Ideas</h2> <!-- Adjusted text size and bottom margin -->
                     
                     <!-- Blog Excerpt -->
-                    <p class="text-gray-600 text-sm mb-3">
+                    <p class="text-gray-600 text-sm mb-4">
                         From candles to wraps, crafting with beeswax is a rewarding experience. Explore creative ideas and tips to get started on your next beeswax project.
                     </p>
                     
@@ -652,13 +773,13 @@
             </div>
 
             <!-- Blog Card 3: Benefits of Beeswax in Skincare -->
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img class="w-full h-48 object-cover" src="{% static 'assets/images/beewax123.avif' %}" alt="Beeswax Blog Image 3">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden p-6"> <!-- Increased padding -->
+                <img class="w-full h-56 object-cover mb-4" src="{% static 'assets/images/beewax123.avif' %}" alt="Beeswax Blog Image 3"> <!-- Increased height and added bottom margin -->
                 <div class="p-4">
                     <!-- Metadata Section -->
-                    <div class="flex flex-col sm:flex-row sm:items-center mb-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center mb-4"> <!-- Increased bottom margin -->
                         <!-- Date Badge -->
-                        <span class="bg-yellow-500 text-white px-2 py-0.5 rounded-full text-xs mb-2 sm:mb-0">09 Sep</span>
+                        <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs mb-2 sm:mb-0">09 Sep</span>
                         
                         <!-- Author and Comments -->
                         <div class="ml-0 sm:ml-3 flex flex-col sm:flex-row text-gray-500 space-y-2 sm:space-y-0 sm:space-x-3">
@@ -676,10 +797,10 @@
                     </div>
                     
                     <!-- Blog Title -->
-                    <h2 class="text-sm font-bold text-gray-800 mb-2">The Benefits of Beeswax in Skincare</h2>
+                    <h2 class="text-base font-bold text-gray-800 mb-3">The Benefits of Beeswax in Skincare</h2> <!-- Adjusted text size and bottom margin -->
                     
                     <!-- Blog Excerpt -->
-                    <p class="text-gray-600 text-sm mb-3">
+                    <p class="text-gray-600 text-sm mb-4">
                         Beeswax is a natural emollient that locks in moisture, making it an excellent ingredient in skincare products. Learn about its benefits and how to use it in your routine.
                     </p>
                     
@@ -694,6 +815,7 @@
         </div>
     </div>
 </div>
+
 
 
 
@@ -745,21 +867,17 @@
 <!-- End clients -->
 
 
-
-
-
-
 <div class="container-fluid footer bg-light py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
         <div class="row g-5 mb-5 align-items-center">
-            <div class="col-lg-7">
+            <div class="col-lg-7 col-md-12">
                 <div class="position-relative mx-auto">
                     <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address to Subscribe">
                     <button type="button" class="btn btn-primary position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
                 </div>
             </div>
-            <div class="col-lg-5">
-                <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
+            <div class="col-lg-5 col-md-12">
+                <div class="d-flex align-items-center justify-content-center justify-content-lg-end mt-3 mt-lg-0">
                     <a class="btn btn-light btn-md-square me-3" href="">
                         <i class="fab fa-facebook-f" style="color: #d89c03;"></i>
                     </a>
@@ -777,19 +895,18 @@
         </div>
         <div class="row g-5">
             <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column align-items-center">
-                    <div class="d-flex align-items-center mb-4">
+                <div class="footer-item text-center text-lg-start">
+                    <div class="d-flex align-items-center mb-4 justify-content-center justify-content-lg-start">
                         <img src="{% static 'assets/images/true.jpg' %}" alt="Electra Logo" class="me-3">
                         <h3 class="text-dark mb-0">
                             <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i>
-                            
                         </h3>
                     </div>
                     <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
+                <div class="footer-item text-center text-lg-start">
                     <h4 class="text-dark mb-4">Quick Links</h4>
                     <a href="#">Home</a>
                     <a href="#">About us</a>
@@ -799,19 +916,19 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Honey services</h4>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
+                <div class="footer-item text-center text-lg-start">
+                    <h4 class="text-dark mb-4">Honey Services</h4>
+                    <a href="#">Honey</a>
+                    <a href="#">Honey</a>
+                    <a href="#">Honey</a>
+                    <a href="#">Honey</a>
+                    <a href="#">Honey</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="footer-item d-flex flex-column">
+                <div class="footer-item text-center text-lg-start">
                     <h4 class="text-dark mb-4">Contact Info</h4>
-                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, manjalumoodu</a>
+                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, Manjalumoodu</a>
                     <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com</a>
                     <a href="tel:+01234567890"><i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
                     <a href="tel:+01234567890" class="mb-3"><i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
@@ -820,6 +937,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Swiper JS -->
 
