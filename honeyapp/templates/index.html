@@ -871,23 +871,19 @@
 
 <!-- Video Modal Start -->
 <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- Adjusted modal size -->
         <div class="modal-content rounded-0">
             <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLabel">Honey Farm Video</h3>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- 16:9 aspect ratio -->
-                <div class="ratio ratio-16x9">
-                    
-                    <video controls>
-                        <source src="{% static 'assets/video/honey.mp4' %}" type="video/mp4">
-
+                <!-- 4:3 aspect ratio for better fit, or adjust/remove as needed -->
+                <div class="ratio ratio-4x3">
+                    <video style="width: 100%; height: auto;" controls> <!-- Manual width/height -->
+                        <source src="{% static 'assets/video/champ.mp4' %}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    
-                    
                 </div>
             </div>
         </div>
@@ -1088,7 +1084,37 @@
 <!-- End clients -->
 
 
-
+<section class="py-12">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-semibold text-yellow-600">We Believe In</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+        <!-- Card 1 -->
+        <div class="text-center">
+            <img src="{% static 'assets/images/wood.jpg' %}" alt="Authenticity Icon" class="mx-auto mb-4 h-24">
+            <h3 class="text-xl font-bold mb-2 text-yellow-600">AUTHENTICITY</h3>
+            <p class="text-gray-700">Bringing purest form of food direct from the farms</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="text-center">
+            <img src="{% static 'assets/images/butter.jpg' %}" alt="Tradition Icon" class="mx-auto mb-4 h-24">
+            <h3 class="text-xl font-bold mb-2 text-yellow-600">TRADITION</h3>
+            <p class="text-gray-700">Harnessing age-old wisdom passed down by Grandmas</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="text-center">
+            <img src="{% static 'assets/images/butter1.jpg' %}" alt="Brutal Honesty Icon" class="mx-auto mb-4 h-24">
+            <h3 class="text-xl font-bold mb-2 text-yellow-600">BRUTAL HONESTY</h3>
+            <p class="text-gray-700">Being 100% transparent & thoroughly lab-tested</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="text-center">
+            <img src="{% static 'assets/images/butter 3.jpg' %}" alt="Purpose Icon" class="mx-auto mb-4 h-24">
+            <h3 class="text-xl font-bold mb-2 text-yellow-600">PURPOSE</h3>
+            <p class="text-gray-700">Empowering rural India with employment & fair trade</p>
+        </div>
+    </div>
+</section>
 
   
   <br>
@@ -1338,7 +1364,8 @@
 <!-- Swiper JS -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 $(document).ready(function(){
     $(".clients-carousel").owlCarousel({

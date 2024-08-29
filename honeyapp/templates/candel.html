@@ -257,125 +257,91 @@
         </div>
 
         <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-                <div class="row g-4">
-                    <!-- Product Card 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/c1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-warning text-white position-absolute start-0 top-0 m-4 py-1 px-3 rounded" style="background-color: #FFD966; z-index: 1;">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-warning" href="">Candle 1 kg</a>
-                                <span class="text-dark me-1">$19.00</span>
-                                <span class="text-body text-decoration-line-through">$29.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+            <div class="row g-4">
+                <!-- Product Card 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
+                    <div class="product-item">
+                        <div class="position-relative bg-light overflow-hidden">
+                            <img class="img-fluid w-100" src="{% static 'assets/images/c1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                            <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5 mb-2 text-[#FFD966]" href="">candel 1 kg</a>
+                            <span class="text-black me-1">₹ 19.00</span>
+                            <span class="text-body text-decoration-line-through">₹29.00</span>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-end py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                </a>
+                            </small>
+                            <small class="w-50 text-center py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                </a>
+                            </small>
                         </div>
                     </div>
-
-                    <!-- Product Card 2 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/c2.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-warning text-white position-absolute start-0 top-0 m-4 py-1 px-3 rounded" style="background-color: #FFD966; z-index: 1;">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-warning" href="">Candle 2 kg</a>
-                                <span class="text-dark me-1">$69.00</span>
-                                <span class="text-body text-decoration-line-through">$109.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+                </div>
+                <!-- Repeat Product Cards -->
+                <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
+                    <div class="product-item">
+                        <div class="position-relative bg-light overflow-hidden">
+                            <img class="img-fluid w-100" src="{% static 'assets/images/c2.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                            <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5 mb-2 text-[#FFD966]" href="">candel 2 kg</a>
+                            <span class="text-black me-1">₹89.00</span>
+                            <span class="text-body text-decoration-line-through">₹109.00</span>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-end py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                </a>
+                            </small>
+                            <small class="w-50 text-center py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                </a>
+                            </small>
                         </div>
                     </div>
-
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/c2.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-warning text-white position-absolute start-0 top-0 m-4 py-1 px-3 rounded" style="background-color: #FFD966; z-index: 1;">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-warning" href="">Candle 2 kg</a>
-                                <span class="text-dark me-1">$69.00</span>
-                                <span class="text-body text-decoration-line-through">$109.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+                </div>
+                <!-- Additional Product Cards -->
+                <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
+                    <div class="product-item">
+                        <div class="position-relative bg-light overflow-hidden">
+                            <img class="img-fluid w-100" src="{% static 'assets/images/c3.avif' %}" alt="" style="height: 300px; object-fit: cover;">
+                            <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color: #FFD966;">New</div>
                         </div>
-                    </div>
-
-
-
-                    <!-- Product Card 3 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/c3.avif' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-warning text-white position-absolute start-0 top-0 m-4 py-1 px-3 rounded" style="background-color: #FFD966; z-index: 1;">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-warning" href="">Candle 5 kg</a>
-                                <span class="text-dark me-1">$159.00</span>
-                                <span class="text-body text-decoration-line-through">$159.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5 mb-2 text-[#FFD966]" href="">candle 5 kg</a>
+                            <span class="text-black me-1">₹49.00</span>
+                            <span class="text-body text-decoration-line-through">₹59.00</span>
                         </div>
-                    </div>
-
-                    <!-- Button to browse more products -->
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn rounded-pill py-2 px-4" href="" style="background-color: #FFD966; color: white; border: none; font-size: 14px;">
-                            Browse More Products
-                        </a>
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-end py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                </a>
+                            </small>
+                            <small class="w-50 text-center py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                </a>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
+           <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <a href="#" class="btn" style="background-color: #FFD966; color: white; border-radius: 50px; padding: 10px 30px; font-size: 16px; margin-top:30px;">Browse More Products</a>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </div>
