@@ -635,6 +635,32 @@
             margin-bottom: 0;
         }
   
+        #loading-screen {
+            background-image: url('{% static "assets/images/20068319.jpg" %}'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating */
+        }
+        /* Enhanced flying animation for bee */
+        @keyframes fly {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-20px, -10px); }
+            50% { transform: translate(20px, -20px); }
+            75% { transform: translate(-15px, 10px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .bee {
+            animation: fly 4s infinite linear;
+        }
+
+        /* Pulse animation for text */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
       </style>
 
           
@@ -642,6 +668,15 @@
 </head>
 
 <body>
+ 
+    <div id="loading-screen" class="fixed inset-0 bg-cover bg-center flex items-center justify-center z-50 transition-opacity duration-500">
+    <div class="bee-container relative flex flex-col items-center justify-center">
+        <img src="{% static 'assets/images/bee-37.png' %}" alt="Loading..." class="bee h-24 w-24 md:h-32 md:w-32">
+        <p class="mt-4 text-lg font-semibold text-yellow-900 animate-pulse">honey...</p>
+    </div>
+</div>
+
+
 <!-- Pre-header Starts -->
 <div class="bg-yellow-300 py-2">
     <div class="container mx-auto flex flex-wrap justify-between items-center text-sm text-gray-600">
@@ -951,7 +986,7 @@
 
     <div class="blog-container">
 
-        <article class="blog-card">
+        <article class="blog-card" style="margin-left:120px;"  >
             <img src="{% static 'assets/images/blog1.jpg' %}" alt="blog" />
             <div class="blog-card-content">
                 <h2 class="title-font">Cities</h2>
@@ -971,7 +1006,7 @@
             </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" style="margin-left:70px;" >
             <img src="{% static 'assets/images/blog2.jpg' %}" alt="blog" />
             <div class="blog-card-content">
                 <h2 class="title-font">Cities</h2>
@@ -991,7 +1026,7 @@
             </div>
         </article>
 
-        <article class="blog-card">
+        <article class="blog-card" style="margin-left:70px;"  >
             <img src="{% static 'assets/images/blog3.jpg' %}" alt="blog" />
             <div class="blog-card-content">
                 <h2 class="title-font">Cities</h2>
@@ -1011,25 +1046,7 @@
             </div>
         </article>
 
-        <article class="blog-card">
-            <img src="{% static 'assets/images/blog4.jpg' %}" alt="blog" />
-            <div class="blog-card-content">
-                <h2 class="title-font">Cities</h2>
-                <h1 class="title-font">How the honeybee makes honey in our apiaries</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer">
-                    <span>Oct 30, 2022 · 9 min read</span>
-                    <span class="inline-flex items-center py-1 pr-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                        </svg>
-                        3.5K
-                    </span>
-                </div>
-                <a href="#" class="learn-more-btn">Learn More</a>
-            </div>
-        </article>
+ 
 
     </div>
 </section>
@@ -1088,33 +1105,32 @@
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-semibold text-yellow-600">We Believe In</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
         <!-- Card 1 -->
         <div class="text-center">
             <img src="{% static 'assets/images/wood.jpg' %}" alt="Authenticity Icon" class="mx-auto mb-4 h-24">
             <h3 class="text-xl font-bold mb-2 text-yellow-600">AUTHENTICITY</h3>
-            <p class="text-gray-700">Bringing purest form of food direct from the farms</p>
+            <p class="text-gray-700">Bringing the purest form of food directly from the farms.</p>
+            <p class="text-gray-700">We ensure every product is as close to nature as possible.</p>
         </div>
         <!-- Card 2 -->
         <div class="text-center">
             <img src="{% static 'assets/images/butter.jpg' %}" alt="Tradition Icon" class="mx-auto mb-4 h-24">
             <h3 class="text-xl font-bold mb-2 text-yellow-600">TRADITION</h3>
-            <p class="text-gray-700">Harnessing age-old wisdom passed down by Grandmas</p>
+            <p class="text-gray-700">Harnessing age-old wisdom passed down by Grandmas.</p>
+            <p class="text-gray-700">We blend traditional methods with modern expertise.</p>
         </div>
         <!-- Card 3 -->
         <div class="text-center">
-            <img src="{% static 'assets/images/butter1.jpg' %}" alt="Brutal Honesty Icon" class="mx-auto mb-4 h-24">
-            <h3 class="text-xl font-bold mb-2 text-yellow-600">BRUTAL HONESTY</h3>
-            <p class="text-gray-700">Being 100% transparent & thoroughly lab-tested</p>
-        </div>
-        <!-- Card 4 -->
-        <div class="text-center">
             <img src="{% static 'assets/images/butter 3.jpg' %}" alt="Purpose Icon" class="mx-auto mb-4 h-24">
             <h3 class="text-xl font-bold mb-2 text-yellow-600">PURPOSE</h3>
-            <p class="text-gray-700">Empowering rural India with employment & fair trade</p>
+            <p class="text-gray-700">Empowering rural India with employment and fair trade.</p>
+            <p class="text-gray-700">Our mission is to uplift communities through ethical practices.</p>
         </div>
     </div>
 </section>
+
+
 
   
   <br>
@@ -1466,6 +1482,46 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden');
 });
 </script>
+<script>
+   
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.getElementById('loading-screen').classList.add('opacity-0');
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('hidden');
+                document.getElementById('main-content').classList.remove('opacity-0');
+                document.getElementById('main-content').classList.add('opacity-100');
+            }, 500); // Wait for the opacity transition to complete
+        }, 3000); // 3 seconds delay
+    });
+    
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function adjustCardStyles() {
+            const blogCards = document.querySelectorAll('.blog-card');
+            const viewportWidth = window.innerWidth;
+    
+            blogCards.forEach(card => {
+                if (viewportWidth <= 480) { // For small screens
+                    card.style.marginLeft = '0';
+                    card.style.width = '100%'; // Full width
+                } else if (viewportWidth <= 768) { // For tablets
+                    card.style.marginLeft = '10px'; // Adjust spacing
+                    card.style.width = '90%'; // Almost full width
+                } else { // For larger screens
+                    card.style.marginLeft = '70px'; // Original margin
+                    card.style.width = '300px'; // Original width
+                }
+            });
+        }
+    
+        adjustCardStyles(); // Initial call
+        window.addEventListener('resize', adjustCardStyles); // Call on resize
+    });
+    </script>
+    
 
 </body>
 
