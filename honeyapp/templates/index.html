@@ -1456,20 +1456,7 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden');
 });
 </script>
-<script>
-   
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            document.getElementById('loading-screen').classList.add('opacity-0');
-            setTimeout(function() {
-                document.getElementById('loading-screen').classList.add('hidden');
-                document.getElementById('main-content').classList.remove('opacity-0');
-                document.getElementById('main-content').classList.add('opacity-100');
-            }, 500); // Wait for the opacity transition to complete
-        }, 3000); // 3 seconds delay
-    });
-    
-</script>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
