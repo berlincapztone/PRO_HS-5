@@ -60,6 +60,9 @@
             background-size: cover;
             background-position: center;
         }
+
+
+
         .video {
             position: relative;
             overflow: hidden;
@@ -635,31 +638,7 @@
             margin-bottom: 0;
         }
   
-        #loading-screen {
-            background-image: url('{% static "assets/images/20068319.jpg" %}'); /* Replace with your background image */
-            background-size: cover;
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* Prevent repeating */
-        }
-        /* Enhanced flying animation for bee */
-        @keyframes fly {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(-20px, -10px); }
-            50% { transform: translate(20px, -20px); }
-            75% { transform: translate(-15px, 10px); }
-            100% { transform: translate(0, 0); }
-        }
-
-        .bee {
-            animation: fly 4s infinite linear;
-        }
-
-        /* Pulse animation for text */
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
+    
 
       </style>
 
@@ -669,12 +648,6 @@
 
 <body>
  
-    <div id="loading-screen" class="fixed inset-0 bg-cover bg-center flex items-center justify-center z-50 transition-opacity duration-500">
-    <div class="bee-container relative flex flex-col items-center justify-center">
-        <img src="{% static 'assets/images/bee-37.png' %}" alt="Loading..." class="bee h-24 w-24 md:h-32 md:w-32">
-        <p class="mt-4 text-lg font-semibold text-yellow-900 animate-pulse">honey...</p>
-    </div>
-</div>
 
 
 <!-- Pre-header Starts -->
@@ -739,47 +712,48 @@
     <div id="carousel" class="carousel">
         <div class="carousel-inner flex transition-transform duration-500">
             <!-- Slide 1 -->
-            <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/two.jpg' %}');">
+            <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/' %}');">
                 <div class="content-wrapper flex flex-col md:flex-row items-center justify-between p-4 md:p-10 bg-yellow-100 bg-cover bg-center relative">
                     <div class="text-left mb-4 md:mb-0 md:w-1/2">
                         <h2 class="text-2xl md:text-3xl text-yellow-600 uppercase mb-2">Pure Honey</h2>
-                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Experience the <span class="text-yellow-700">Sweetness</span> <br> of Nature's <span class="text-yellow-500">Best</span></h1>
-                        <p class="text-gray-700 mb-4">Discover our 100% pure and organic honey, straight from the hive to your table.</p>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">From Hive to Home, <span class="text-yellow-700"></span> <br>   <span class="text-yellow-500">Naturally </span></h1>
+                        <p class="text-gray-700 mb-4"> Focuses on the journey of honey from the hive directly to the consumer’s table, ensuring natural quality and purity every step of the way.</p>
                         <div class="flex items-center space-x-4">
                             <button class="bg-yellow-600 text-white px-4 py-2 rounded-full">Shop Now</button>
                         </div>
                     </div>
-                    <img src="{% static 'assets/images/mm.png' %}" alt="Honey Image" class="object-cover rounded-lg w-full md:w-1/2"/>
+                    <img src="{% static 'assets/images/hon cou.png' %}" alt="Honey Image" class="object-cover rounded-lg w-full md:w-1/2 h-90 md:h-90 -mt-8"/>
+
                 </div>
             </div>
 
             <!-- Slide 2 -->
-            <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/two.jpg' %}');">
+            <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/' %}');">
                 <div class="content-wrapper flex flex-col md:flex-row items-center justify-between p-4 md:p-10 bg-yellow-200 bg-cover bg-center relative">
                     <div class="text-left mb-4 md:mb-0 md:w-1/2">
-                        <h2 class="text-2xl md:text-3xl text-yellow-600 uppercase mb-2">Organic Honey</h2>
-                        <h1 class="text-4xl md:text-5xl font-bold mb-4">Nourish Your Body <br> with <span class="text-yellow-500">Pure Goodness</span></h1>
-                        <p class="text-gray-700 mb-4">Enjoy the health benefits of our premium organic honey, naturally sourced.</p>
+                        <h2 class="text-2xl md:text-3xl text-yellow-600 uppercase mb-2">Spices</h2>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4">A Little Bit Of  <br>  <span class="text-yellow-500">Spices</span></h1>
+                        <p class="text-gray-700 mb-4"> Spices create the essence of life. They have the power to transform a simple meal into a sensory experience</p>
                         <div class="flex items-center space-x-4">
-                            <button class="bg-yellow-600 text-white px-4 py-2 rounded-full">Learn More</button>
+                            <button class="bg-yellow-600 text-white px-4 py-2 rounded-full">shop now</button>
                         </div>
                     </div>
-                    <img src="{% static 'assets/images/mm.png' %}" alt="Honey Image" class="object-cover rounded-lg w-full md:w-1/2"/>
+                    <img src="{% static 'assets/images/spices cou.png' %}" alt="Honey Image" class="object-cover rounded-lg w-full md:w-1/2 h-90 md:h-90 -mt-8"/>
                 </div>
             </div>
 
             <!-- Slide 3 -->
-            <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/two.jpg' %}');">
+            <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/' %}');">
                 <div class="content-wrapper flex flex-col md:flex-row items-center justify-between p-4 md:p-10 bg-yellow-300 bg-cover bg-center relative">
                     <div class="text-left mb-4 md:mb-0 md:w-1/2">
-                        <h2 class="text-2xl md:text-3xl text-yellow-600 uppercase mb-2">Bee's Best</h2>
-                        <h1 class="text-4xl md:text-6xl font-bold mb-4">From Hive to Table <br> with <span class="text-yellow-500">Love</span></h1>
+                        <h2 class="text-2xl md:text-3xl text-yellow-600 uppercase mb-2">Coconuts</h2>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Coconuts <br>The tree  <span class="text-yellow-500">of Life</span></h1>
                         <p class="text-gray-700 mb-4">Savor the rich flavors of honey produced with care by our hardworking bees.</p>
                         <div class="flex items-center space-x-4">
-                            <button class="bg-yellow-600 text-white px-4 py-2 rounded-full">Explore Products</button>
+                            <button class="bg-yellow-600 text-white px-4 py-2 rounded-full">show now</button>
                         </div>
                     </div>
-                    <img src="{% static 'assets/images/mm.png' %}" alt="Honey Image" class="object-cover rounded-lg w-full md:w-1/2"/>
+                    <img src="{% static 'assets/images/coc cou.png' %}" alt="Honey Image" class="object-cover rounded-lg w-full md:w-1/2 h-90 md:h-90 -mt-8"/>
                 </div>
             </div>
         </div>
@@ -827,7 +801,7 @@
                     <span class="text-gray-700"><span class="font-bold">honey improves</span> blood composition</span>
                 </li>
                 <li class="flex items-start">
-                    <span class="text-2xl font-bold mr-4" style="color: #facc15;">✔</span> <!-- Yellow color -->
+                    <span class="text-2xl font-bold mr-4" style="color: #f59e0b;">✔</span> <!-- Yellow color -->
                     <span class="text-gray-700">helps to cope with <span class="font-bold">insomnia</span></span>
                 </li>
                 <li class="flex items-start">
@@ -1155,7 +1129,7 @@
                             <i class="fa fa-star"></i>
                         </div>
                         <p>berlin joe</p>
-                        <span>Web Developer</span>
+                        <span>user</span>
                     </div>
                 </div>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita velit labore suscipit distinctio, officiis deserunt rem blanditiis ducimus. Voluptate quaerat assumenda qui veniam facilis doloribus maiores impedit ducimus cum accusamus.</p>
